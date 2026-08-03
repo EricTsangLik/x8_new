@@ -1,0 +1,29 @@
+.contact-cta {
+  background: linear-gradient(90deg, #111 0%, #000 100%);
+  padding: 60px 0;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-text h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.cta-text p {
+  color: var(--text-secondary);
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+}

@@ -1,0 +1,34 @@
+.store-renovation-hero {
+  background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(255, 255, 255, 0.8) 90%), url('/店鋪裝修工程/renovation-hero.jpeg') center/cover no-repeat;
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.store-renovation-hero-container {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+}
+
+.store-renovation-hero-content {
+  max-width: 700px;
+}
+
+.store-renovation-hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--accent-gold);
+}
+
+.store-renovation-hero-content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.store-renovation-hero-desc {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 16px;
+}

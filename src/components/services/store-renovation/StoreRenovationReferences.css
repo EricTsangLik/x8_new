@@ -1,0 +1,69 @@
+.store-renovation-references {
+  padding: 80px 0;
+  background-color: var(--bg-primary);
+}
+
+.store-renovation-references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.store-renovation-reference-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.store-renovation-reference-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.store-renovation-reference-card:hover .store-renovation-reference-image {
+  transform: scale(1.05);
+}
+
+.store-renovation-reference-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.store-renovation-reference-card:hover .store-renovation-reference-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.store-renovation-reference-overlay span {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .store-renovation-references-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .store-renovation-references-grid {
+    grid-template-columns: 1fr;
+  }
+}

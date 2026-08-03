@@ -1,0 +1,34 @@
+.popup-hero {
+  background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(248, 248, 248, 0.8) 90%), url('/商場pop up/popup-hero.jpeg') center/cover no-repeat;
+  padding: 100px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.popup-hero-container {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+}
+
+.popup-hero-content {
+  max-width: 700px;
+}
+
+.popup-hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--accent-gold);
+}
+
+.popup-hero-content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+
+.popup-hero-desc {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 16px;
+}

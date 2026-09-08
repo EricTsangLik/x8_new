@@ -6,7 +6,7 @@ import ContactCTA from '@/components/home/ContactCTA';
 
 export const metadata = {
   title: 'ROADSHOW 一站式推廣 | X8 PRODUCTION',
-  description: '專業 ROADSHOW 策劃與執行，提供全方位推廣活動解決方案，提升品牌影響力。',
+  description: '商場展覽位置租用｜活動製作｜Promoter 團隊｜倉存管理｜物流支援｜宣傳車。X8 Production 為金融及獲客品牌提供 Roadshow 一站式推廣支援。',
 };
 
 export default function RoadshowPage() {
@@ -15,7 +15,10 @@ export default function RoadshowPage() {
       <RoadshowHero />
       <RoadshowServices />
       <RoadshowReferences />
-      <ContactCTA />
+      <ContactCTA
+        heading="需要更有效的 Roadshow 執行方案？"
+        copy="與 X8 團隊聯繫，規劃更清晰的獲客活動流程與現場配置。"
+      />
     </>
   );
 }

@@ -3,6 +3,11 @@
   background-color: var(--bg-primary);
 }
 
+.roadshow-references-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
 .roadshow-references-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

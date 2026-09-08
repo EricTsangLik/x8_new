@@ -11,7 +11,7 @@
 }
 
 .roadshow-hero-content {
-  max-width: 700px;
+  max-width: 820px;
 }
 
 .roadshow-hero-content h1 {
@@ -21,14 +21,48 @@
 }
 
 .roadshow-hero-content p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 24px;
   letter-spacing: 2px;
+  line-height: 1.7;
 }
 
 .roadshow-hero-desc {
   color: var(--text-secondary);
   line-height: 1.8;
   font-size: 16px;
+}
+
+.roadshow-positioning {
+  margin-top: 28px;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.roadshow-positioning li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.roadshow-positioning li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+@media (max-width: 576px) {
+  .roadshow-hero-content h1 {
+    font-size: 32px;
+  }
 }

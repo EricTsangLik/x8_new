@@ -1,0 +1,64 @@
+.exhibition-booth-references {
+  padding: 80px 0;
+  background-color: var(--bg-primary);
+}
+
+.exhibition-booth-references-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.exhibition-booth-references-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.exhibition-booth-reference-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.exhibition-booth-reference-placeholder {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, rgba(0, 0, 0, 0.4) 100%);
+  color: var(--accent-gold);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 20px;
+}
+
+.exhibition-booth-reference-body {
+  padding: 20px 22px 24px;
+}
+
+.exhibition-booth-reference-body h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.exhibition-booth-reference-body p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .exhibition-booth-references-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .exhibition-booth-references-grid {
+    grid-template-columns: 1fr;
+  }
+}

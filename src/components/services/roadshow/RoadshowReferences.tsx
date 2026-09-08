@@ -21,7 +21,9 @@ const RoadshowReferences = () => {
   return (
     <section className="roadshow-references">
       <div className="container">
-        <h2 className="section-title">精選案例</h2>
+        <div className="roadshow-references-header">
+          <h2 className="section-title">精選案例</h2>
+        </div>
         <div className="roadshow-references-grid">
           {references.map((ref, index) => (
             <div key={index} className="roadshow-reference-card">

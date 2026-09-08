@@ -21,14 +21,9 @@
 }
 
 .popup-hero-content p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   letter-spacing: 2px;
-}
-
-.popup-hero-desc {
-  color: var(--text-secondary);
-  line-height: 1.8;
-  font-size: 16px;
+  line-height: 1.7;
 }

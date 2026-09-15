@@ -26,25 +26,42 @@ const ClientCarousel = () => {
 
   return (
     <section className="client-carousel">
-      <div className="container carousel-container">
-        <div className="carousel-title">我們的客戶</div>
+      <div className="carousel-container">
+        <div className="carousel-title">
+          我們的客戶
+          <svg
+            className="carousel-title-line"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M2 5 C8 2.2, 20 7.8, 32 4.5 C44 1.5, 56 8, 68 4.8 C80 1.8, 90 7.2, 98 5"
+              fill="none"
+              stroke="#e8b923"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
+
         <div className="carousel-track-wrapper">
           <div className="carousel-track">
-            {/* Render the list twice for a seamless infinite loop */}
             {[...clients, ...clients].map((client, index) => (
               <div key={index} className="client-logo">
-                <Image 
-                  src={client.logo} 
-                  alt={client.name} 
-                  width={120} 
-                  height={60} 
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={100}
+                  height={40}
                   style={{ objectFit: 'contain' }}
                 />
               </div>
             ))}
           </div>
         </div>
-        <div className="carousel-more">及更多品牌 &gt;</div>
+
+        <div className="carousel-more">及更多夥伴 &gt;</div>
       </div>
     </section>
   );

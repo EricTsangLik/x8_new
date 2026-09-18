@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { newServicePages } from '@/data/new-services';
 import './Services.css';
 
 const services = [
@@ -53,6 +54,13 @@ const services = [
     image: '',
     href: '/services/event-decoration',
   },
+  ...newServicePages.map((service, index) => ({
+    id: String(index + 8).padStart(2, '0'),
+    title: service.title,
+    desc: service.tagline,
+    image: '',
+    href: `/services/${service.slug}`,
+  })),
 ];
 
 const Services = () => {

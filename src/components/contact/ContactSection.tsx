@@ -89,6 +89,13 @@ const ContactSection = () => {
                   <option value="backdrop">BackDrop 設計與製作</option>
                   <option value="exhibition-booth">展覽攤位製作</option>
                   <option value="event-decoration">活動佈置裝飾</option>
+                  <option value="license-application">設計及牌照申請服務</option>
+                  <option value="equipment-rental">設備租賃服務</option>
+                  <option value="lightbox">廣告燈箱</option>
+                  <option value="mall-sale">商場特賣場製作</option>
+                  <option value="mall-decoration">商場裝飾佈置</option>
+                  <option value="christmas-mall">聖誕商場佈置</option>
+                  <option value="new-year-mall">新年商場佈置</option>
                   <option value="other">其他查詢</option>
                 </select>
               </div>

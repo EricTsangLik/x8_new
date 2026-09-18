@@ -68,7 +68,9 @@
   top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: 220px;
+  min-width: 240px;
+  max-height: min(70vh, 560px);
+  overflow-y: auto;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -214,7 +216,8 @@
   }
 
   .nav-dropdown.open .nav-dropdown-menu {
-    max-height: 480px;
+    max-height: min(60vh, 720px);
+    overflow-y: auto;
     pointer-events: auto;
     transform: none;
     padding: 4px 0 8px;

@@ -12,6 +12,7 @@ const ServiceSimplePage = ({ service }: { service: NewServicePage }) => {
         tagline={service.tagline}
         lead={service.lead}
         description={service.description}
+        image={service.image}
       />
       <ServiceReferences cases={service.cases} />
       <ContactCTA heading={service.ctaHeading} copy={service.ctaCopy} />

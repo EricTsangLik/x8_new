@@ -1,11 +1,17 @@
 import React from 'react';
+import ServicePhotoGrid from '@/components/services/shared/ServicePhotoGrid';
 import './EventDecorationReferences.css';
 
-const cases = [
-  { title: '品牌推廣', desc: '品牌活動現場佈置與裝飾' },
-  { title: '慶典活動', desc: '慶典主題場景與氛圍佈置' },
-  { title: '婚禮佈置', desc: '婚禮場地設計與現場佈置' },
-  { title: '公司聚會', desc: '企業活動及聚會空間裝飾' },
+const photos = [
+  { src: '/活動佈置裝飾/富途牛牛-荃新天地-20251018.jpg', alt: '富途牛牛 荃新天地' },
+  { src: '/活動佈置裝飾/富途牛牛-荃新天地-20251018(1).jpg', alt: '富途牛牛 荃新天地 現場' },
+  { src: '/活動佈置裝飾/富途牛牛-屯門屯市廣場-20250526.jpeg', alt: '富途牛牛 屯門市廣場' },
+  { src: '/活動佈置裝飾/中國人壽中心-20260205.jpg', alt: '中國人壽中心' },
+  { src: '/活動佈置裝飾/中國人壽中心-20260205(1).jpg', alt: '中國人壽中心 現場' },
+  { src: '/活動佈置裝飾/老虎證券-第一城-20260509.jpg', alt: '老虎證券 第一城' },
+  { src: '/活動佈置裝飾/富途牛牛- 龍堡酒店-220260808.jpg', alt: '富途牛牛 龍堡酒店' },
+  { src: '/活動佈置裝飾/ 富途牛牛-JP morgan-K11.jpeg', alt: '富途牛牛 JP Morgan K11' },
+  { src: '/活動佈置裝飾/玻璃纖維裝飾_.jpg', alt: '玻璃纖維裝飾' },
 ];
 
 const EventDecorationReferences = () => {
@@ -15,19 +21,7 @@ const EventDecorationReferences = () => {
         <div className="event-decoration-references-header">
           <h2 className="section-title">精選案例</h2>
         </div>
-        <div className="event-decoration-references-grid">
-          {cases.map((item) => (
-            <article key={item.title} className="event-decoration-reference-card">
-              <div className="event-decoration-reference-placeholder" aria-hidden="true">
-                <span>{item.title}</span>
-              </div>
-              <div className="event-decoration-reference-body">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ServicePhotoGrid photos={photos} />
       </div>
     </section>
   );

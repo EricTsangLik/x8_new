@@ -6,11 +6,21 @@ type ServiceHeroProps = {
   tagline: string;
   lead: string;
   description: string;
+  image?: string;
 };
 
-const ServiceHero = ({ title, tagline, lead, description }: ServiceHeroProps) => {
+const ServiceHero = ({ title, tagline, lead, description, image }: ServiceHeroProps) => {
   return (
-    <section className="service-simple-hero">
+    <section
+      className="service-simple-hero"
+      style={
+        image
+          ? {
+              backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(42, 34, 22, 0.72) 90%), url('${image}')`,
+            }
+          : undefined
+      }
+    >
       <div className="container service-simple-hero-container">
         <div className="service-simple-hero-content">
           <h1>{title}</h1>

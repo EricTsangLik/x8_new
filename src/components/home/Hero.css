@@ -1,52 +1,27 @@
 .hero {
-  display: grid;
-  grid-template-columns: minmax(280px, 38%) 1fr;
-  align-items: stretch;
-  background: #f3f3f3;
+  position: relative;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
+.hero-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero-copy {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 56px 28px 56px 56px;
+  width: min(38%, 520px);
+  padding: 40px 24px 40px 56px;
   color: #111;
-  background-color: #f3f3f3;
-  background-image:
-    radial-gradient(ellipse at 0% 20%, rgba(0, 0, 0, 0.06) 0%, transparent 42%),
-    radial-gradient(ellipse at 10% 90%, rgba(0, 0, 0, 0.05) 0%, transparent 38%),
-    linear-gradient(118deg, transparent 8%, rgba(0, 0, 0, 0.035) 9%, transparent 12%),
-    linear-gradient(98deg, transparent 18%, rgba(0, 0, 0, 0.03) 20%, transparent 24%),
-    linear-gradient(108deg, transparent 72%, rgba(0, 0, 0, 0.04) 75%, transparent 80%);
-}
-
-.hero-copy::after {
-  content: "";
-  position: absolute;
-  top: -8%;
-  right: -72px;
-  width: 140px;
-  height: 116%;
-  background: #f3f3f3;
-  pointer-events: none;
-  clip-path: polygon(
-    0 0,
-    58% 0,
-    78% 8%,
-    42% 16%,
-    86% 24%,
-    48% 34%,
-    92% 46%,
-    38% 58%,
-    80% 70%,
-    44% 82%,
-    70% 92%,
-    36% 100%,
-    0 100%
-  );
 }
 
 .hero-copy h1 {
@@ -85,35 +60,88 @@
   color: #fff;
 }
 
-.hero-visual {
-  position: relative;
-  min-width: 0;
-  background: #111;
-  line-height: 0;
-}
-
-.hero-photo {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1099px) {
   .hero {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-bg {
+    order: 2;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: 78% center;
   }
 
   .hero-copy {
-    padding: 40px 24px 32px;
-  }
-
-  .hero-copy::after {
-    display: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    padding: 36px 28px 24px;
   }
 
   .hero-copy h1 {
-    font-size: 32px;
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-bg {
+    height: 240px;
+    object-position: 82% center;
+  }
+
+  .hero-copy {
+    padding: 28px 20px 20px;
+  }
+
+  .hero-copy h1 {
+    font-size: 28px;
+  }
+
+  .hero-services {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .hero-btn {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-bg {
+    height: 200px;
+  }
+
+  .hero-copy h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1099px) and (orientation: landscape) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(240px, 42%) 1fr;
+    min-height: 280px;
+  }
+
+  .hero-copy {
+    padding: 28px 20px 28px 28px;
+  }
+
+  .hero-copy h1 {
+    font-size: 26px;
+  }
+
+  .hero-bg {
+    order: 0;
+    height: 100%;
+    min-height: 280px;
+    object-position: 70% center;
   }
 }

@@ -2,9 +2,8 @@
 
 import React, { FormEvent, useState } from 'react';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { whatsappEnquiryHref, whatsappHref } from '@/lib/whatsapp';
 import './ContactSection.css';
-
-const WHATSAPP_NUMBER = '85252279172';
 
 const SERVICE_LABELS: Record<string, string> = {
   'mall-popup': '商場 POP-UP',
@@ -48,11 +47,7 @@ const ContactSection = () => {
       data.message,
     ].join('\n');
 
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,
-      '_blank',
-      'noopener,noreferrer'
-    );
+    window.open(whatsappHref(text), '_blank', 'noopener,noreferrer');
     setStatus('success');
   };
 
@@ -73,7 +68,11 @@ const ContactSection = () => {
                 </div>
                 <div className="info-text">
                   <h3>電話 / WhatsApp</h3>
-                  <p>+852 5227 9172</p>
+                  <p>
+                    <a href={whatsappEnquiryHref()} target="_blank" rel="noopener noreferrer">
+                      +852 5227 9172
+                    </a>
+                  </p>
                 </div>
               </div>
 

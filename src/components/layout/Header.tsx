@@ -3,11 +3,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { MessageCircle, Menu, X, ChevronDown } from 'lucide-react';
 import { serviceLinks } from '@/data/services';
+import { serviceNameFromPath, whatsappEnquiryHref } from '@/lib/whatsapp';
 import './Header.css';
 
 const Header = () => {
+  const pathname = usePathname();
+  const whatsappUrl = whatsappEnquiryHref(serviceNameFromPath(pathname));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
@@ -110,7 +114,7 @@ const Header = () => {
             <Link href="/contact" onClick={closeMenu}>聯絡我們</Link>
             
             <div className="mobile-actions">
-              <Link href="https://wa.me/85252279172" target="_blank" onClick={closeMenu} className="btn-primary">
+              <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="btn-primary">
                 <MessageCircle size={18} />
                 WhatsApp 查詢
               </Link>
@@ -118,7 +122,7 @@ const Header = () => {
           </nav>
 
           <div className="header-actions desktop-actions">
-            <Link href="https://wa.me/85252279172" target="_blank" className="btn-primary">
+            <Link href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
               <MessageCircle size={18} />
               WhatsApp 查詢
             </Link>
